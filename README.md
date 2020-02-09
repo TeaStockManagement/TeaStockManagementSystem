@@ -6,7 +6,10 @@
          * Backend  : NodeJs(Express Framework)
          * FrontEnd : Angular 8
          * Jwt authontication token
-     
+<h1>Download </h1>
+           
+           git clone https://github.com/TeaStockManagement/TeaStockManagementSystem.git
+
 <h1>Instalation</h1>
    
 <p> New Node Express.js App using Express Generator </p>
