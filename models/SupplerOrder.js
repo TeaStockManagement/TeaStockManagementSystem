@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var autoIncrement = require('mongoose-auto-increment');
 
-var suppler_order_scheema = ({
+var suppler_order_scheema = new Schema({
 
     suppler_orderID:{
         type:Number,
@@ -19,4 +19,4 @@ var suppler_order_scheema = ({
 
 autoIncrement.initialize(mongoose.connection);
 UserSchema.plugin(autoIncrement.plugin, 'suppler_orderID');
-module.exports = mongoose.model('suppler_order_scheema', UserSchema);
+module.exports = mongoose.model('suppler_order_scheema', SupplerOrder);

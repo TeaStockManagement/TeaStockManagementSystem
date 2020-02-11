@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var autoIncrement = require('mongoose-auto-increment');
 
-var rep_schema = Schema({
+var rep_schema = new Schema({
     
     orderID:{
         type:Number,
