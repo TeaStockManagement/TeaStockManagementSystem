@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var bcrypt = require('bcrypt-nodejs');
+var autoIncrement = require('mongoose-auto-increment');
 
 var UserSchema = new Schema({
 
@@ -70,4 +71,6 @@ UserSchema.methods.comparePassword = function (passw, cb) {
     });
 };
 
+autoIncrement.initialize(mongoose.connection);
+UserSchema.plugin(autoIncrement.plugin, 'userID');
 module.exports = mongoose.model('User', UserSchema);
