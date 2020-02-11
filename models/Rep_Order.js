@@ -13,10 +13,10 @@ var rep_schema = Schema({
     diliverdate:Date,
     userID:Number,
     totalbill:Number,
-    shopI: Number,
+    shopID: Number,
     
 });
 
 autoIncrement.initialize(mongoose.connection);
-UserSchema.plugin(autoIncrement.plugin, 'userID');
+UserSchema.plugin(autoIncrement.plugin, 'orderID');
 module.exports = mongoose.model('Rep_Order', UserSchema);
