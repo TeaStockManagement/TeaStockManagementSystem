@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
+var autoIncrement = require('mongoose-auto-increment');
 
 
 var ExpensiveSchema = new Schema({
@@ -16,4 +17,6 @@ var ExpensiveSchema = new Schema({
 });
 
 
+autoIncrement.initialize(mongoose.connection);
+UserSchema.plugin(autoIncrement.plugin, 'expensiveID');
 module.exports = mongoose.model('User', UserSchema);

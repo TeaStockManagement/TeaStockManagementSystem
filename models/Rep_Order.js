@@ -1,7 +1,8 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
+var autoIncrement = require('mongoose-auto-increment');
 
-var rep_schema = Schema({
+var rep_schema = new Schema({
     
     orderID:{
         type:Number,
@@ -12,6 +13,10 @@ var rep_schema = Schema({
     diliverdate:Date,
     userID:Number,
     totalbill:Number,
-    shopI: Number,
+    shopID: Number,
     
-})
+});
+
+autoIncrement.initialize(mongoose.connection);
+UserSchema.plugin(autoIncrement.plugin, 'orderID');
+module.exports = mongoose.model('Rep_Order', UserSchema);
