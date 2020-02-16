@@ -4,7 +4,7 @@ var autoIncrement = require('mongoose-auto-increment');
 
 var Item_CatogorySchema = new Schema({
 
-     itemID:{
+     itemcatogoryID:{
         type: Number,
         required: true,
         unque: true
