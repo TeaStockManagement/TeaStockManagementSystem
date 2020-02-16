@@ -17,5 +17,5 @@ var Item_CatogorySchema = new Schema({
     
 
 autoIncrement.initialize(mongoose.connection);
-UserSchema.plugin(autoIncrement.plugin, 'itemID');
+UserSchema.plugin(autoIncrement.plugin, 'itemcatogoryID');
 module.exports = mongoose.model('Item_CatogorySchema', Item_Catogory);
